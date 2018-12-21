@@ -1,0 +1,17 @@
+<body>
+    <div class="container">
+    <h2>Latest user posts</h2>
+    {{> loginButtons}}
+        
+    <form class="new-userpost">
+        <input type="text" placeholder="Write what you wish" name="text" />    
+    </form>
+
+    <div class="userposts-container">
+        {{#each userposts}}
+            {{> userpost}}
+        {{/each}}
+    </div>
+   </div>
+    {{> editmodal}}
+</body>

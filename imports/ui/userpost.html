@@ -1,0 +1,16 @@
+<template name="userpost">
+    <div class="panel-userpost {{#if isOwner}}is-owner{{/if}}">
+        <div class="userpost-info">
+            <strong>{{ username }}</strong> <small class="text-muted">{{ formatDate createdDate }}</small>
+            <p>{{ text }}</p>
+        </div>
+        {{#if currentUser}}
+        <ul class="list-icons">
+            {{#if isOwner}}
+            <li><button class="edit"><i class="fa fa-pencil"></i></button></li>
+            <li><button class="delete"><i class="fa fa-trash"></i></button></li>
+            {{/if}}
+        </ul>
+        {{/if}}
+    </div>
+</template>
